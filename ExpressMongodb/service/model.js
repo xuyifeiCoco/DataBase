@@ -8,7 +8,7 @@ const models = {  //这个里面会定义集合的字段
 	user:{
 		'name':{type:String, 'require':true},  //名字
 		'NickName':{type:String, 'require':true},  //昵称
-		'Gender':{'type':String, 'require':true},  //性别
+		'Gender':{'type':Boolean, 'require':true},  //true  男   false女
 		// 个人简介或者职位简介
 		'Age':{'type':Number ,require:true},
 		// 职位名

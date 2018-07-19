@@ -63,6 +63,7 @@ Router.post('/insert', (req, res) => {
     Email,
     Address,
   } = req.body
+  // console.log(req.body)
   User.create([{
     name,
     NickName,
