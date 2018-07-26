@@ -11,3 +11,5 @@
     db.collection.find(query, projection)  查询集合文档
     db.collection.remove({})   这个表示删除全部
 4、然后执行surpervisor server.js   http://localhost:8081/user如果看到helloWorld就表明成功了
+
+测试一下
