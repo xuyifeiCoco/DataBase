@@ -8,6 +8,7 @@ const User = model.getModel('user')
 
 Router.get('/', (req, res) => {
   return res.write('hello world')
+  res.end()
 })
 
 Router.get('/list', (req, res) => {
@@ -27,8 +28,10 @@ Router.get('/list', (req, res) => {
       "$lte": endTime // 这个表示小于等于
     }
   }
+
+  let regName= new RegExp(name, 'i');//模糊查询参数
   let query = Object.keys(req.query).length === 0 ? {} : {
-    name,
+    name: regName,
     ...timeRange
   }
   if (!name) {
